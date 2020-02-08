@@ -1,0 +1,44 @@
+Random Oversampling , or combination sampling appear to present the best results.
+i would def. not do clustercentroids, my computer took almost forever to run it. 
+
+
+
+
+Naive Random Oversampling
+
+              precision    recall  f1-score   support
+
+   high_risk       0.01      0.71      0.02        90
+    low_risk       1.00      0.64      0.78     17115
+
+    accuracy                           0.64     17205
+   macro avg       0.50      0.68      0.40     17205
+weighted avg       0.99      0.64      0.78     17205
+
+*********************************************************
+SMOTE Oversampling
+
+              precision    recall  f1-score   support
+
+   high_risk       0.01      0.63      0.02        90
+    low_risk       1.00      0.67      0.80     17115
+
+    accuracy                           0.67     17205
+   macro avg       0.50      0.65      0.41     17205
+weighted avg       0.99      0.67      0.79     17205
+
+******************************************
+# ClusterCentroids resampler
+                   pre       rec       spe        f1       geo       iba       sup
+  high_risk       0.01      0.65      0.39      0.01      0.51      0.26       101
+   low_risk       0.99      0.39      0.65      0.57      0.51      0.25     17104
+avg / total       0.99      0.40      0.65      0.56      0.51      0.25     17205
+
+*******************************************
+Combination (Over and Under) Sampling
+                   pre       rec       spe        f1       geo       iba       sup
+
+  high_risk       0.01      0.78      0.57      0.02      0.66      0.45        90
+   low_risk       1.00      0.57      0.78      0.72      0.66      0.43     17115
+
+avg / total       0.99      0.57      0.78      0.72      0.66      0.43     17205
